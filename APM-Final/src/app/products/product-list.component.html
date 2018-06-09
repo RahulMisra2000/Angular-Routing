@@ -47,6 +47,10 @@
                                  [style.margin.px]="imageMargin">
                         </td>
                         <td><a [routerLink]="[product.id]" 
+          // VERY IMP ! ------------------------------------------------------------------------------------------
+          // The ONLY reason for sending the query string parameters to the component at this link is that when the back button is 
+          // pressed to come back to this component these querystring parameters will be sent back (because that component does "preserve" 
+          // for querystrings. So when this component gets the querystring back, it can do filtering, etc...
                                [queryParams]="{filterBy: listFilter, showImage: showImage}">
                             {{product.productName}}
                             </a>
