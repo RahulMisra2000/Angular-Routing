@@ -14,6 +14,7 @@ import { IProduct } from './product';
 export class ProductService {
     private baseUrl = 'api/products';
 
+    // Http is deprecated now. Should use HttpClient -----------------------------
     constructor(private http: Http) { }
 
     getProducts(): Observable<IProduct[]> {
