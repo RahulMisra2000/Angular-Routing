@@ -25,6 +25,9 @@ import { MessageService } from '../messages/message.service';
     ]
 })
 export class MessageComponent {
+    
+    // Note : Anything declared here is available in the template (.html) and that is why messageService is also
+    //        available.
     constructor(private messageService: MessageService, private router: Router) { }
 
     close(): void {
