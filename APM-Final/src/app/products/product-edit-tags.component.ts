@@ -14,6 +14,8 @@ export class ProductEditTagsComponent implements OnInit {
     constructor(private route: ActivatedRoute) { }
 
     ngOnInit(): void {
+        // Accessing the parent component's resolve data. Getting a reference to it.
+        // So both the parent component and this component are pointing to the SAME data
         this.route.parent.data.subscribe(data => {
             this.product = data['product'];
         });
