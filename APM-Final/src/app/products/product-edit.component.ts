@@ -18,6 +18,7 @@ export class ProductEditComponent implements OnInit {
     private originalProduct: IProduct;
     private dataIsValid: { [key: string]: boolean } = {};
 
+    // NICE WAY to compare is something has changed......
     get isDirty(): boolean {
         return JSON.stringify(this.originalProduct) !== JSON.stringify(this.currentProduct);
     }
