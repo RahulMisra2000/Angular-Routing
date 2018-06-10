@@ -32,10 +32,7 @@ export class ProductEditComponent implements OnInit {
         this.originalProduct = Object.assign({}, value);
     }
 
-    constructor(private route: ActivatedRoute,
-        private router: Router,
-        private productService: ProductService,
-        private messageService: MessageService) { }
+    constructor(private route: ActivatedRoute, private router: Router, private productService: ProductService,  private messageService: MessageService) { }
 
     ngOnInit(): void {
         // Watch for changes to the resolve data
