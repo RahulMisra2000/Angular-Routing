@@ -25,12 +25,10 @@ import { MessageService } from '../messages/message.service';
     ]
 })
 export class MessageComponent {
-
-    constructor(private messageService: MessageService,
-                private router: Router) { }
+    constructor(private messageService: MessageService, private router: Router) { }
 
     close(): void {
-        // Close the popup.
+        // ---------- If you specify null as the path then the named router-outlet will not display anything -----------
         this.router.navigate([{ outlets: { popup: null } }]);
         this.messageService.isDisplayed = false;
     }
